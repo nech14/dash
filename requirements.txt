@@ -3,3 +3,4 @@ requests
 plotly
 dash
 dash_bootstrap_components
+dash_draggable

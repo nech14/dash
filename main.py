@@ -5,12 +5,8 @@ import pandas as pd
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv')
 
-#external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-#app = Dash(__name__, external_stylesheets=external_stylesheets)
 app = Dash(__name__)
 
-# адаптивность диаграмм - встраивание в окно
 style_dashboard = {
     "height": '100%',
     "width": '100%',
@@ -228,8 +224,7 @@ app.layout = create_dash(meas_vs_year_dash, pop_pie_dash,
                          bubble_dash, top_pop_dash)
 
 
-# Run: gunicorn main:app
 app = app.server
-
-if __name__ == '__main__':
-    app.run(debug=True)
+#
+# if __name__ == '__main__':
+#     app.run()
